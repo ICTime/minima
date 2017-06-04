@@ -4,7 +4,9 @@ categories: linux
 tags : [jekyll ]
 ---
 
-Jekyll also offers powerful support for code snippets:
+Jekyll [minima](https://github.com/jekyll/minima) 
+
+Jekyll [slide](https://github.com/jekylltools/jekyll-ideal-image-slider-include/tree/gh-pages) 
 
 {% highlight python %}
 def print_hi(name):
