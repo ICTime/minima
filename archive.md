@@ -4,8 +4,7 @@ title: 存档
 permalink: /archive/
 ---
 AA
-{{ BASE_PATH| relative_url  }}
-{{baseurl}}
+"{{site.baseurl}}"
 BB
 
 <h1 class="page-heading">By Category</h1>
@@ -87,9 +86,9 @@ BB
     {% if node.title != null %}
       {% if group == null or group == node.group %}
         {% if page.url == node.url %}
-        <li class="active"><a href="{{ site.baseurl }}{{node.url}}" class="active">{{node.title}}</a></li>
+        <li class="active"><a href="{{site.baseurl }}{{node.url}}" class="active">{{node.title}}</a></li>
         {% else %}
-        <li><a href="{{ site.baseurl }} {{node.url}}">{{node.title}}</a></li>
+        <li><a href="{{ site.baseurl }}{{node.url}}">{{node.title}}</a></li>
         {% endif %}
       {% endif %}
     {% endif %}
@@ -106,19 +105,13 @@ BB
     {% if node.title != null %}
       {% if group == null or group == node.group %}
         {% if page.url == node.url %}
-        <li class="active"><a href="/mobile{{node.url}}" class="active">{{node.title}}</a></li>
+        <li class="active"><a href="{{ site.baseurl }}{{ node.url}}" class="active">{{node.title}}</a></li>
         {% else %}
-        <li><a href="/mobile{{node.url}}">{{node.title}}</a></li>
+        <li><a href="{{ site.baseurl }}{{node.url}}">{{node.title}}</a></li>
         {% endif %}
       {% endif %}
     {% endif %}
   {% endfor %}
   </ul>
 {% endfor %}
-
-
-
-
-
-
 
