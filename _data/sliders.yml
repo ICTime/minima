@@ -1,0 +1,68 @@
+- selector: slider1
+  captions: true
+  images:
+    - src: /img/1.jpg
+      alt: Minimum required attributes
+    - data-src: /img/2.jpg
+      alt: Use data-src for on-demand loading
+    - data-src: /img/3.jpg
+      alt: Use data-src-2x for HiDPI devices
+    - src: /img/4.jpg
+      alt: Links work too
+      href: https://github.com/jekylltools/jekyll-ideal-image-slider-include
+  settings:
+    height: 400
+    initialHeight:
+    maxHeight:
+    interval:
+    transitionDuration:
+    effect:
+    disableNav:
+    keyboardNav:
+    previousNavSelector:
+    nextNavSelector:
+
+- selector: slider2
+  captions: true
+  images:
+    - src: /img/1.jpg
+      title: 来自电子工程行业，系统化自动化交易的践行者
+      alt: 关于我们
+      href: http://edgefund.cn/about 
+    - src: /img/2.jpg
+      title: 数据挖掘, 可重复的非随机性
+      alt: 阅读更多
+      href: http://edgefund.cn/research
+    - src: /img/3.jpg
+      title: 投机交易, 一项管理风险的系统化工程
+      alt: 阅读更多
+      href: http://edgefund.cn/research
+    - src: /img/4.jpg
+      title: 四个纬度, 相同策略一篮子交易, 低相关性, 小众CTA< 
+      alt: 产品详情
+      href: http://edgefund.cn/product
+    - src: /img/5.jpg
+      alt: 
+      href: http://edgefund.cn/product
+  settings:
+    height: 500
+    effect: "'fade'"
+    previousNavSelector:
+    nextNavSelector:
+
+- selector: slider3
+  images:
+    - src: /img/1.jpg
+      alt: image one
+    - src: /img/2.jpg
+      alt: image two
+    - src: /img/3.jpg
+      alt: image three
+    - src: /img/4.jpg
+      alt: image four
+  settings:
+    height: "'auto'"
+    disableNav: true
+
+
+
