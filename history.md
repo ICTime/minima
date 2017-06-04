@@ -1,4 +1,9 @@
-## CANGE
+---
+layout: page
+title: History
+permalink: /history/
+---
+## History of Edge Trading
 
 ## 2.1.1 / 2017-04-13
 

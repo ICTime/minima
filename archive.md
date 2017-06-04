@@ -3,43 +3,75 @@ layout: page
 title: Archive 
 permalink: /archive/
 ---
-Demo site for [Jekyll Ideal Image Slider Include](https://github.com/jekylltools/jekyll-ideal-image-slider-include)
-
-<h1 class="page-heading">Archive By Category</h1>
+<h1 class="page-heading">By Category</h1>
 <ul class="tag_box inline">
   {% assign categories_list = site.categories %}
   {% if categories_list.first[0] == null %}
     {% for category in categories_list %}
-        <li><a href="{{ BASE_PATH }}#{{ category }}-ref">
+        <a href="{{ BASE_PATH }}#{{ category }}-ref">
             {{ category | join: "/" }} <span>{{ site.categories[category].size }}</span>
-        </a></li>
+        </a>
     {% endfor %}
   {% else %}
     {% for category in categories_list %}
-        <li><a href="{{ BASE_PATH }}#{{ category[0] }}-ref">
+        <a href="{{ BASE_PATH }}#{{ category[0] }}-ref">
             {{ category[0] | join: "/" }} <span>{{ category[1].size }}</span>
-        </a></li>
+        </a>
     {% endfor %}
   {% endif %}
 </ul>
 
-<h1 class="page-heading">Archive By Tags</h1>
+<h1 class="page-heading">By Tags</h1>
 <ul class="tag_box inline">
   {% assign tags_list = site.tags %}
   {% if tags_list.first[0] == null %}
     {% for tag in tags_list %}
-        <li><a href="{{ BASE_PATH }}#{{ tag }}-ref">{{ tag }} <span>{{ site.tags[tag].size }}</span></a></li>
+        <a href="{{ BASE_PATH }}#{{ tag }}-ref">{{ tag }} <span>{{ site.tags[tag].size }}</span></a>
     {% endfor %}
   {% else %}
     {% for tag in tags_list %}
-        <li><a href="{{ BASE_PATH }}#{{ tag[0] }}-ref">{{ tag[0] }} <span>{{ tag[1].size }}</span></a></li>
+        <a href="{{ BASE_PATH }}#{{ tag[0] }}-ref">{{ tag[0] }} <span>{{ tag[1].size }}</span></a>
     {% endfor %}
   {% endif %}
 
 </ul>
 
-
-
+<h1 class="page-heading">By Time</h1>
+<ul class="tag_box inline">
+  {% assign posts_collate = site.posts %}
+  {% for post in posts_collate  %}
+    {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+    {% capture this_month %}{{ post.date | date: "%B" }}{% endcapture %}
+    {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
+    {% capture next_month %}{{ post.previous.date | date: "%B" }}{% endcapture %}
+  
+    {% if forloop.first %}
+      <h2>{{this_year}}</h2>
+      <h3>{{this_month}}</h3>
+      <ul>
+    {% endif %}
+  
+    <li><span>{{ post.date | date: "%B %e, %Y" }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+  
+    {% if forloop.last %}
+      </ul>
+    {% else %}
+      {% if this_year != next_year %}
+        </ul>
+        <h2>{{next_year}}</h2>
+        <h3>{{next_month}}</h3>
+        <ul>
+      {% else %}    
+        {% if this_month != next_month %}
+          </ul>
+          <h3>{{next_month}}</h3>
+          <ul>
+        {% endif %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+{% assign posts_collate = nil %}
+ </ul>
 
 
 {% for category in site.categories %}
@@ -58,11 +90,8 @@ Demo site for [Jekyll Ideal Image Slider Include](https://github.com/jekylltools
     {% endif %}
   {% endfor %}
 
-  </ul>
+ </ul>
 {% endfor %}
-
-
-
 
 {% for tag in site.tags %}
   <h2 id="{{ tag[0] }}-ref">{{ tag[0] }}</h2>
@@ -81,5 +110,10 @@ Demo site for [Jekyll Ideal Image Slider Include](https://github.com/jekylltools
   {% endfor %}
   </ul>
 {% endfor %}
-~
+
+
+
+
+
+
 
