@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: 关于
 permalink: /about/
 ---
 <img src="http://ictime.github.com/image/local.jpg"  width="120" height="150" title="ICTimer" align="right" />

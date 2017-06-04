@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Slide 
+title: 图片
 permalink: /slide/
 image_sliders:
   - slider2

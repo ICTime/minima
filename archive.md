@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Archive 
+title: 存档
 permalink: /archive/
 ---
 <h1 class="page-heading">By Category</h1>
@@ -9,13 +9,13 @@ permalink: /archive/
   {% if categories_list.first[0] == null %}
     {% for category in categories_list %}
         <a href="{{ BASE_PATH }}#{{ category }}-ref">
-            {{ category | join: "/" }} <span>{{ site.categories[category].size }}</span>
+            {{ category | join: "/" }} <span> ({{ site.categories[category].size }})</span>
         </a>
     {% endfor %}
   {% else %}
     {% for category in categories_list %}
         <a href="{{ BASE_PATH }}#{{ category[0] }}-ref">
-            {{ category[0] | join: "/" }} <span>{{ category[1].size }}</span>
+            {{ category[0] | join: "/" }} <span> ({{ category[1].size }})</span>
         </a>
     {% endfor %}
   {% endif %}
@@ -26,11 +26,11 @@ permalink: /archive/
   {% assign tags_list = site.tags %}
   {% if tags_list.first[0] == null %}
     {% for tag in tags_list %}
-        <a href="{{ BASE_PATH }}#{{ tag }}-ref">{{ tag }} <span>{{ site.tags[tag].size }}</span></a>
+        <a href="{{ BASE_PATH }}#{{ tag }}-ref">{{ tag }} <span>({{ site.tags[tag].size }})</span></a>
     {% endfor %}
   {% else %}
     {% for tag in tags_list %}
-        <a href="{{ BASE_PATH }}#{{ tag[0] }}-ref">{{ tag[0] }} <span>{{ tag[1].size }}</span></a>
+        <a href="{{ BASE_PATH }}#{{ tag[0] }}-ref">{{ tag[0] }} <span>({{ tag[1].size }})</span></a>
     {% endfor %}
   {% endif %}
 
