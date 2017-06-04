@@ -3,6 +3,11 @@ layout: page
 title: 存档
 permalink: /archive/
 ---
+AA
+{{ BASE_PATH| relative_url  }}
+{{baseurl}}
+BB
+
 <h1 class="page-heading">By Category</h1>
 <ul class="tag_box inline">
   {% assign categories_list = site.categories %}
@@ -82,9 +87,9 @@ permalink: /archive/
     {% if node.title != null %}
       {% if group == null or group == node.group %}
         {% if page.url == node.url %}
-        <li class="active"><a href="{{ BASE_PATH }}{{node.url}}" class="active">{{node.title}}</a></li>
+        <li class="active"><a href="{{ BASE_PATH| relative_url  }}{{node.url}}" class="active">{{node.title}}</a></li>
         {% else %}
-        <li><a href="{{ BASE_PATH }}{{node.url}}">{{node.title}}</a></li>
+        <li><a href="{{ BASE_PATH | relative_url }} {{node.url}}">{{node.title}}</a></li>
         {% endif %}
       {% endif %}
     {% endif %}
@@ -101,9 +106,11 @@ permalink: /archive/
     {% if node.title != null %}
       {% if group == null or group == node.group %}
         {% if page.url == node.url %}
-        <li class="active"><a href="{{ BASE_PATH }}{{node.url}}" class="active">{{node.title}}</a></li>
+        <li class="post-link" ><a href="{{ node.url }}">{{node.title}}</a></li>
         {% else %}
-        <li><a href="{{ BASE_PATH }}{{node.url}}">{{node.title}}</a></li>
+        <h4 >
+        <li><a class="post-link" href="{{node.url}}" >{{node.title}}</a></li>
+        </h4 >
         {% endif %}
       {% endif %}
     {% endif %}
