@@ -5,7 +5,6 @@ tags : [jekyll ]
 ---
 
 Jekyll [minima](https://github.com/jekyll/minima) 
-
 Jekyll [slide](https://github.com/jekylltools/jekyll-ideal-image-slider-include/tree/gh-pages) 
 
 {% highlight python %}
@@ -20,18 +19,26 @@ Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most ou
 [jekyll-talk]: https://talk.jekyllrb.com/
 
 
-# Markdown Introduction 
+----------------
+Below is another Artical  
+
+----------------
+
+
+# Markdown Introduction (H1) 
+Title is H0 header
 webpage original is from [here](http://support.mashery.com/docs/customizing_your_portal/Markdown_Cheat_Sheet/ "show txt"). 
 
 ## Level 2 Header (H2)
-##### Level 5 Header (H5)
+H1/H2 header have h-line seperators
 
+### Level 3 Header (H3)
+H3/4 have NO h-line seperators 
 one or more consecutive lines of text separated by one or more blank lines. one or more consecutive lines of text separated by one or more blank lines.
 
-This is another paragraph.
+#### Level 4 Header (H4)
+H4 is the smallerest header, To make things simple, thre is NO H5 . 
 
-I am a sentence with  
-a line break.
 
 * Red
 + Green
