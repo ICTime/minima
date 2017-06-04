@@ -87,9 +87,9 @@ BB
     {% if node.title != null %}
       {% if group == null or group == node.group %}
         {% if page.url == node.url %}
-        <li class="active"><a href="{{ BASE_PATH| relative_url  }}{{node.url}}" class="active">{{node.title}}</a></li>
+        <li class="active"><a href="{{ site.baseurl }}{{node.url}}" class="active">{{node.title}}</a></li>
         {% else %}
-        <li><a href="{{ BASE_PATH | relative_url }} {{node.url}}">{{node.title}}</a></li>
+        <li><a href="{{ site.baseurl }} {{node.url}}">{{node.title}}</a></li>
         {% endif %}
       {% endif %}
     {% endif %}
@@ -106,11 +106,9 @@ BB
     {% if node.title != null %}
       {% if group == null or group == node.group %}
         {% if page.url == node.url %}
-        <li class="post-link" ><a href="{{ node.url }}">{{node.title}}</a></li>
+        <li class="active"><a href="/mobile{{node.url}}" class="active">{{node.title}}</a></li>
         {% else %}
-        <h4 >
-        <li><a class="post-link" href="{{node.url}}" >{{node.title}}</a></li>
-        </h4 >
+        <li><a href="/mobile{{node.url}}">{{node.title}}</a></li>
         {% endif %}
       {% endif %}
     {% endif %}
