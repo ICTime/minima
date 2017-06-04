@@ -3,10 +3,6 @@ layout: page
 title: 存档
 permalink: /archive/
 ---
-AA
-"{{site.baseurl}}"
-BB
-
 <h1 class="page-heading">By Category</h1>
 <ul class="tag_box inline">
   {% assign categories_list = site.categories %}
