@@ -1,5 +1,6 @@
 - selector: slider1
   captions: true
+  bullets: false
   images:
     - src: /img/1.jpg
       alt: Minimum required attributes
@@ -24,6 +25,7 @@
 
 - selector: slider2
   captions: true
+  bullets: true
   images:
     - src: /img/1.jpg
       title: 来自电子工程行业，系统化自动化交易的践行者
