@@ -1,2 +1,2 @@
-git commit -am 'adding bullet for slide: version 1.5 '
+git commit -am 'adding post '
 git push origin master
